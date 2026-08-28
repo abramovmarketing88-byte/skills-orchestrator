@@ -47,6 +47,7 @@ robocopy "/media/keepi/Новый том/Yandex.Disk/Cursor_Backup_2026-08-20/sk
 | **ai-seller-master** | AI-продавец Suvvy/Avito | https://github.com/abramovmarketing88-byte/cursor-skills/tree/main/ai-seller-master |
 | **tidy-folder** | Уборка папки без удаления | https://github.com/abramovmarketing88-byte/tidy-folder |
 | **landing-audit** | Аудит лендинга | https://github.com/abramovmarketing88-byte/cursor-skills/tree/main/landing-audit |
+| **landing-pipeline** | JSON-пайплайн лендинга (7 шагов, без фейк-пруфа) | https://github.com/abramovmarketing88-byte/cursor-skills/tree/main/landing-pipeline |
 | **ui-design-review** | UI review | https://github.com/abramovmarketing88-byte/cursor-skills/tree/main/ui-design-review |
 | **selling-landing** | Продающий лендинг | https://github.com/abramovmarketing88-byte/cursor-skills/tree/main/selling-landing |
 | **skills-orchestrator** | Эта карта | https://github.com/abramovmarketing88-byte/skills-orchestrator |
@@ -85,3 +86,6 @@ MCP HeyGen: remote `https://mcp.heygen.com/mcp/v1/`
 7. «Видео / аватар HeyGen» → heygen-* + MCP heygen
 8. «Что за скиллы / поставь всё» → этот оркестратор
 9. «Линейный оркестратор / MASTER ORCHESTRATOR / Task_Input» → `linear-orchestrator`
+10. «Лендинг JSON-пайплайн / системный оркестратор / quality-gate / gpts-landing-orchestrator» → `landing-pipeline` (потом `selling-landing` на вёрстку)
+11. «Лендинг / one-pager / LP / тексты блоков / HTML» → `selling-landing`
+12. «Аудит / докрутить готовый лендинг» → `landing-audit`
