@@ -10,7 +10,7 @@ description: >-
 
 Единая точка входа: какой скилл брать и откуда ставить после переустановки.
 
-Бэкап на Яндекс.Диске: `D:\Yandex.Disk\Cursor_Backup_2026-08-20\`
+Бэкап на Яндекс.Диске: `/media/keepi/Новый том/Yandex.Disk/Cursor_Backup_2026-08-20/`
 
 ## Быстрая установка всех своих скиллов
 
@@ -25,12 +25,13 @@ gh skill install abramovmarketing88-byte/avito-api-skill --agent cursor --scope 
 gh skill install abramovmarketing88-byte/tidy-folder --agent cursor --scope user
 gh skill install abramovmarketing88-byte/cursor-skills --agent cursor --scope user --all
 gh skill install abramovmarketing88-byte/skills-orchestrator --agent cursor --scope user
+gh skill install abramovmarketing88-byte/linear-orchestrator --agent cursor --scope user
 ```
 
 Альтернатива из бэкапа:
 
 ```powershell
-robocopy "D:\Yandex.Disk\Cursor_Backup_2026-08-20\skills" "$env:USERPROFILE\.cursor\skills" /E
+robocopy "/media/keepi/Новый том/Yandex.Disk/Cursor_Backup_2026-08-20/skills" "$env:USERPROFILE\.cursor\skills" /E
 ```
 
 ## Каталог
@@ -49,6 +50,7 @@ robocopy "D:\Yandex.Disk\Cursor_Backup_2026-08-20\skills" "$env:USERPROFILE\.cur
 | **ui-design-review** | UI review | https://github.com/abramovmarketing88-byte/cursor-skills/tree/main/ui-design-review |
 | **selling-landing** | Продающий лендинг | https://github.com/abramovmarketing88-byte/cursor-skills/tree/main/selling-landing |
 | **skills-orchestrator** | Эта карта | https://github.com/abramovmarketing88-byte/skills-orchestrator |
+| **linear-orchestrator** | Строго линейный пайплайн 4 агентов (без откатов) | https://github.com/abramovmarketing88-byte/linear-orchestrator |
 
 Монорепо пачки: https://github.com/abramovmarketing88-byte/cursor-skills
 
@@ -70,7 +72,7 @@ MCP HeyGen: remote `https://mcp.heygen.com/mcp/v1/`
 | threejs-devtools | `npx -y threejs-devtools-mcp` |
 | heygen | remote MCP + OAuth |
 
-Полный restore: `D:\Yandex.Disk\Cursor_Backup_2026-08-20\restore\RESTORE.md`
+Полный restore: `/media/keepi/Новый том/Yandex.Disk/Cursor_Backup_2026-08-20/restore\RESTORE.md`
 
 ## Маршрутизация запросов
 
@@ -82,3 +84,4 @@ MCP HeyGen: remote `https://mcp.heygen.com/mcp/v1/`
 6. «Прибери папку» → `tidy-folder`
 7. «Видео / аватар HeyGen» → heygen-* + MCP heygen
 8. «Что за скиллы / поставь всё» → этот оркестратор
+9. «Линейный оркестратор / MASTER ORCHESTRATOR / Task_Input» → `linear-orchestrator`
