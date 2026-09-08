@@ -26,6 +26,7 @@ gh skill install abramovmarketing88-byte/avito-budget-review --agent cursor --sc
 gh skill install abramovmarketing88-byte/tidy-folder --agent cursor --scope user
 gh skill install abramovmarketing88-byte/yadisk-mcp --agent cursor --scope user
 gh skill install abramovmarketing88-byte/skill-auditor --agent cursor --scope user
+gh skill install abramovmarketing88-byte/youtube-publish --agent cursor --scope user
 gh skill install abramovmarketing88-byte/cursor-skills --agent cursor --scope user --all
 gh skill install abramovmarketing88-byte/skills-orchestrator --agent cursor --scope user
 gh skill install abramovmarketing88-byte/linear-orchestrator --agent cursor --scope user
@@ -58,6 +59,7 @@ robocopy "/media/keepi/Новый том/Yandex.Disk/Cursor_Backup_2026-08-20/sk
 | **skills-orchestrator** | Эта карта | https://github.com/abramovmarketing88-byte/skills-orchestrator |
 | **linear-orchestrator** | Строго линейный пайплайн 4 агентов (без откатов) | https://github.com/abramovmarketing88-byte/linear-orchestrator |
 | **skill-auditor** | Аудит / план / fix / verify чужих Cursor-скиллов | https://github.com/abramovmarketing88-byte/skill-auditor |
+| **youtube-publish** | Пакет публикации YouTube + RuTube (описание, Studio) | https://github.com/abramovmarketing88-byte/youtube-publish |
 
 Монорепо пачки: https://github.com/abramovmarketing88-byte/cursor-skills
 
@@ -93,6 +95,7 @@ MCP HeyGen: remote `https://mcp.heygen.com/mcp/v1/`
 6. «Прибери папку» → `tidy-folder`
 6a. «Яндекс Диск / yadisk / загрузить на Диск» → `yadisk-mcp`
 7. «Видео / аватар HeyGen» → heygen-* + MCP heygen
+7a. «Пакет YouTube / RuTube / описание ролика / Studio» → `youtube-publish`
 8. «Что за скиллы / поставь всё» → этот оркестратор
 9. «Линейный оркестратор / MASTER ORCHESTRATOR / Task_Input» → `linear-orchestrator`
 10. «Лендинг JSON-пайплайн / системный оркестратор / quality-gate / gpts-landing-orchestrator» → `landing-pipeline` (потом `selling-landing` на вёрстку)
