@@ -30,6 +30,7 @@ gh skill install abramovmarketing88-byte/yadisk-mcp --agent cursor --scope user
 gh skill install abramovmarketing88-byte/skill-auditor --agent cursor --scope user
 gh skill install abramovmarketing88-byte/create-skill-author --agent cursor --scope user
 gh skill install abramovmarketing88-byte/youtube-publish --agent cursor --scope user
+gh skill install abramovmarketing88-byte/viral-reels --agent cursor --scope user
 gh skill install abramovmarketing88-byte/landing-audit --agent cursor --scope user
 gh skill install abramovmarketing88-byte/landing-pipeline --agent cursor --scope user
 gh skill install abramovmarketing88-byte/selling-landing --agent cursor --scope user
@@ -73,6 +74,7 @@ robocopy "/media/keepi/Новый том/Yandex.Disk/Cursor_Backup_2026-08-20/sk
 | **skill-auditor** | Аудит / план / fix / verify чужих Cursor-скиллов | https://github.com/abramovmarketing88-byte/skill-auditor |
 | **create-skill-author** | Создать новый Agent Skill (SKILL.md) | https://github.com/abramovmarketing88-byte/create-skill-author |
 | **youtube-publish** | Пакет публикации YouTube + RuTube (описание, Studio) | https://github.com/abramovmarketing88-byte/youtube-publish |
+| **viral-reels** | Сценарии виральных Reels / Shorts / TikTok (режиссёрская таблица) | https://github.com/abramovmarketing88-byte/viral-reels |
 | **heygen-avatar** | HeyGen аватар / digital twin | https://github.com/abramovmarketing88-byte/heygen-avatar |
 | **heygen-video** | HeyGen генерация видео | https://github.com/abramovmarketing88-byte/heygen-video |
 | **heygen-translate** | HeyGen перевод / дубляж | https://github.com/abramovmarketing88-byte/heygen-translate |
@@ -109,6 +111,7 @@ MCP HeyGen: remote `https://mcp.heygen.com/mcp/v1/`
 6a. «Яндекс Диск / yadisk / загрузить на Диск» → `yadisk-mcp`
 7. «Видео / аватар HeyGen» → heygen-* + MCP heygen
 7a. «Пакет YouTube / RuTube / описание ролика / Studio» → `youtube-publish`
+7b. «Сценарий рилса / Shorts / TikTok / хук / вертикальное видео» → `viral-reels` (не heygen-video и не youtube-publish)
 8. «Что за скиллы / поставь всё» → этот оркестратор
 9. «Линейный оркестратор / MASTER ORCHESTRATOR / Task_Input» → `linear-orchestrator`
 10. «Лендинг JSON-пайплайн / системный оркестратор / quality-gate / gpts-landing-orchestrator» → `landing-pipeline` (потом `selling-landing` на вёрстку)
