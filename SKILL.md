@@ -106,6 +106,7 @@ MCP HeyGen: remote `https://mcp.heygen.com/mcp/v1/`
 4. «Выгрузка API / статистика» → `avito-api`
 4a. «Разбор бюджета / куда ушёл бюджет / Авито+CRM» → `avito-budget-review`
 4b. «Аудит карточки объявления» → `avito-listing-audit`
+4c. «Разбор кабинета по API» → связка `avito-api` + `avito-budget-review`, текст для команды: [avito-cabinet.md](./avito-cabinet.md)
 5. «Бот-продавец / Suvvy» → `ai-seller-master`
 6. «Прибери папку» → `tidy-folder`
 6a. «Яндекс Диск / yadisk / загрузить на Диск» → `yadisk-mcp`

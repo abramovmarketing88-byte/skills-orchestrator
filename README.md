@@ -4,6 +4,8 @@
 
 См. [SKILL.md](./SKILL.md).
 
+Разбор кабинета Авито по API: [avito-cabinet.md](./avito-cabinet.md).
+
 ## Install
 
 ```bash
