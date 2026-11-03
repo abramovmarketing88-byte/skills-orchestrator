@@ -5,6 +5,7 @@ set -euo pipefail
 
 SKILLS_ROOT="${HOME}/.cursor/skills"
 OWNER="abramovmarketing88-byte"
+# avito-cabinet-orchestrator lives in abramovmarketing88-byte/orchestrator/skills/ (see sync-avito-cabinet-to-orchestrator.sh)
 
 declare -A REPO_MAP=(
   [abramov-telegram-posts]=abramov-telegram-posts

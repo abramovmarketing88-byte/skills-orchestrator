@@ -5,6 +5,7 @@ set -euo pipefail
 
 SKILLS_ROOT="${HOME}/.cursor/skills"
 OWNER="abramovmarketing88-byte"
+# avito-cabinet-orchestrator lives in abramovmarketing88-byte/orchestrator/skills/ (see sync-avito-cabinet-to-orchestrator.sh)
 
 # skill_dir -> github_repo_name
 declare -A REPO_MAP=(

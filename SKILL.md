@@ -24,6 +24,9 @@ gh skill install abramovmarketing88-byte/avito-search-audit --agent cursor --sco
 gh skill install abramovmarketing88-byte/avito-api-skill --agent cursor --scope user
 gh skill install abramovmarketing88-byte/avito-budget-review --agent cursor --scope user
 gh skill install abramovmarketing88-byte/avito-listing-audit --agent cursor --scope user
+# мета-разбор кабинета (лежит в monorepo orchestrator/skills/):
+# скопировать skills/avito-cabinet-orchestrator → ~/.cursor/skills/
+# или: git clone abramovmarketing88-byte/orchestrator и взять папку skills/avito-cabinet-orchestrator
 gh skill install abramovmarketing88-byte/ai-seller-master --agent cursor --scope user
 gh skill install abramovmarketing88-byte/tidy-folder --agent cursor --scope user
 gh skill install abramovmarketing88-byte/yadisk-mcp --agent cursor --scope user
@@ -62,6 +65,7 @@ robocopy "/media/keepi/Новый том/Yandex.Disk/Cursor_Backup_2026-08-20/sk
 | **avito-api** | Экспорт/статы через Avito API | https://github.com/abramovmarketing88-byte/avito-api-skill |
 | **avito-budget-review** | Разбор бюджета Авито+CRM → HTML/canvas | https://github.com/abramovmarketing88-byte/avito-budget-review |
 | **avito-listing-audit** | Аудит карточки объявления Авито | https://github.com/abramovmarketing88-byte/avito-listing-audit |
+| **avito-cabinet-orchestrator** | Полный разбор кабинета: API + бюджет + top/anti карточки | https://github.com/abramovmarketing88-byte/orchestrator/tree/main/skills/avito-cabinet-orchestrator |
 | **ai-seller-master** | AI-продавец Suvvy/Avito | https://github.com/abramovmarketing88-byte/ai-seller-master |
 | **tidy-folder** | Уборка папки без удаления | https://github.com/abramovmarketing88-byte/tidy-folder |
 | **yadisk-mcp** | Яндекс Диск через MCP / cloud-api | https://github.com/abramovmarketing88-byte/yadisk-mcp |
@@ -80,6 +84,8 @@ robocopy "/media/keepi/Новый том/Yandex.Disk/Cursor_Backup_2026-08-20/sk
 | **heygen-translate** | HeyGen перевод / дубляж | https://github.com/abramovmarketing88-byte/heygen-translate |
 
 Монорепо пачки (частичный дубль): https://github.com/abramovmarketing88-byte/cursor-skills
+
+OpenClaw/Cursor orchestrator monorepo (в т.ч. `avito-cabinet-orchestrator`): https://github.com/abramovmarketing88-byte/orchestrator
 
 ## HeyGen
 
@@ -106,7 +112,7 @@ MCP HeyGen: remote `https://mcp.heygen.com/mcp/v1/`
 4. «Выгрузка API / статистика» → `avito-api`
 4a. «Разбор бюджета / куда ушёл бюджет / Авито+CRM» → `avito-budget-review`
 4b. «Аудит карточки объявления» → `avito-listing-audit`
-4c. «Разбор кабинета по API» → связка `avito-api` + `avito-budget-review`, текст для команды: [avito-cabinet.md](./avito-cabinet.md)
+4c. «Разбор кабинета по API / top anti-top» → `avito-cabinet-orchestrator` (см. [avito-cabinet.md](./avito-cabinet.md)); сабскиллы: `avito-api` + `avito-budget-review` + `avito-listing-audit`
 5. «Бот-продавец / Suvvy» → `ai-seller-master`
 6. «Прибери папку» → `tidy-folder`
 6a. «Яндекс Диск / yadisk / загрузить на Диск» → `yadisk-mcp`

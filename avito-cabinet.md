@@ -1,26 +1,30 @@
-# Как разбираем кабинет Авито
+# Разбор кабинета Авито
 
-Два навыка работают парой.
+Точка входа — мета-скилл **`avito-cabinet-orchestrator`**.
 
-1. Сначала снимаем данные по API: объявления, фид автозагрузки, просмотры и контакты.
+Он по опроснику запускает связку:
+
+1. `avito-api` — выгрузка кабинета / фида / статистики  
    https://github.com/abramovmarketing88-byte/avito-api-skill
-
-   Ключи кабинета кладутся локально в `.env.local` и в чат не пишутся. Один набор ключей — один аккаунт.
-
-2. Потом разбор бюджета: куда ушли деньги, цена обращения, какие объявления кормят кабинет и какие его съедают.
+2. `avito-budget-review` — куда ушёл бюджет, тиры, winners/burners  
    https://github.com/abramovmarketing88-byte/avito-budget-review
+3. Top-10 / anti-top-10 + diff (режимы `stats_only` | `hybrid` | `full20`) на механике  
+   `avito-listing-audit` — https://github.com/abramovmarketing88-byte/avito-listing-audit
 
-   Этот навык сам в API не ходит. Он читает файлы, которые снял первый.
+Ключи кабинета — только в `avito_export/.env.local`, не в чат. Один набор ключей = один аккаунт.
 
-Отдельно, если нужна одна карточка, а не весь кабинет: открываем объявление на сайте и ставим оценку заголовку, цене, фото и профилю.
-https://github.com/abramovmarketing88-byte/avito-listing-audit
+## Где лежит скилл
 
-## Поставить себе в Cursor
+- Локально: `~/.cursor/skills/avito-cabinet-orchestrator/`
+- GitHub: https://github.com/abramovmarketing88-byte/orchestrator/tree/main/skills/avito-cabinet-orchestrator
+
+## Поставить зависимости
 
 ```bash
 gh skill install abramovmarketing88-byte/avito-api-skill --agent cursor --scope user
 gh skill install abramovmarketing88-byte/avito-budget-review --agent cursor --scope user
 gh skill install abramovmarketing88-byte/avito-listing-audit --agent cursor --scope user
+# мета-скилл: скопировать из orchestrator/skills/avito-cabinet-orchestrator в ~/.cursor/skills/
 ```
 
 Карта всех навыков: [SKILL.md](./SKILL.md).

@@ -4,7 +4,8 @@
 
 См. [SKILL.md](./SKILL.md).
 
-Разбор кабинета Авито по API: [avito-cabinet.md](./avito-cabinet.md).
+Разбор кабинета Авито: мета-скилл `avito-cabinet-orchestrator` — [avito-cabinet.md](./avito-cabinet.md)  
+Исходник в monorepo: https://github.com/abramovmarketing88-byte/orchestrator/tree/main/skills/avito-cabinet-orchestrator
 
 ## Install
 
